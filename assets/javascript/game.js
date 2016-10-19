@@ -21,7 +21,8 @@ function pickMovie() {
 
 //Computer shows underscores to represent the number of letters in movie title
     computerWord = computerWord.replace(/[a-z]/g, '_')
-}
+   var computerWord = computerWord.innerHTML;
+
 
 //show the word in the console
 console.log(computerWord);
