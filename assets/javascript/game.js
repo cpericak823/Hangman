@@ -1,5 +1,5 @@
 //Press any key to start playing
-function startGame(){
+
 
 //Variables
 
@@ -7,17 +7,19 @@ var score = 0;
 
 var lives = 15;
 
-var userGuess = ;
+var userGuess = '';
 
-var computerWord = ;
+var computerWord = '';
 
-var space = ;
+var space = '';
+
+movies = ['the blues brothers', 'ferris bueller\'s day off', 'the break up', 'home alone', 'the dark knight'
+	];
 
 //Computer picks random movie title from list of array
 
-function () {
-	movies = ['the blues brothers', 'ferris bueller\'s day off', 'the break up', 'home alone', 'the dark knight'
-	];
+function pickMovie() {
+	
 
     chosenMovie = movies[Math.floor(Math.random() * movies.length)];
     computerWord = chosenMovie[Math.floor(Math.random() * movies.length)];
@@ -35,7 +37,7 @@ document.onkeyup = function(event){
 		var letter = String.fromCharCode(event.keyCode).toLowerCase();
 
  lettersGuessed = document.getElementById('userGuess');
- return = document.createElement('p');
+ var pElement = document.createElement('p');
 
 
 //If the user guesses a letter that is in the title, replace the underscore that represents the letter with that letter
@@ -57,9 +59,7 @@ else {
 
 var showLives = document.getElementById('lives')
 
-function (){
-	showLives.innerHTML = 'lives'
-	}
+
 
 //If the user guesses the movie title in less that 15 guesses, add 1 to the number of wins
 // --- use  to score ++
@@ -116,7 +116,7 @@ else {
 
 //Repeat the game until all movie titles have been used once
 // --- use a for loop
-for (var i = [movies.length]; i < 4; {
+for (var i = 0; i < movies.length; i++); {
 	console.log(movies[i]);
 }
 
