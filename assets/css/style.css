@@ -45,3 +45,7 @@ body {
 .img-responsive {
 	margin: 0 auto;
 }
+
+.computerWord {
+	letter-spacing: 3px;
+}
