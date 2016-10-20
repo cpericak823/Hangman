@@ -22,16 +22,30 @@ function pickMovie() {
     computerWord = chosenMovie.replace(/[a-z]/g, '_')
     document.getElementById("computerWord").innerHTML = computerWord
 
-
-
 //show the word in the console
-// console.log(computerWord);
+console.log(chosenMovie);
 
+//show number of allowed guesses
+function listGuesses(){
+	var allowedGuesses;
+}
+	listGuesses()
+	document.getElementById("allowedGuesses").innerHTML = allowedGuesses
 
 
 //If the user guesses a letter that is in the title, replace the underscore that represents the letter with that letter
-'computerWord'.indexOf(userGuess);
+// 'computerWord'.indexOf(userGuess);
   // They've picked a letter that is in the word
+if (userGuess === computerWord){
+	computerWord = chosenMovie.replace(/_/g,"[a-z]");
+	allowedGuesses--;
+}
+
+else {
+	// alert ("Wrong");
+	document.getElementById("userGuess").innerHTML = userGuess
+
+}
 
 
   // They have not picked a letter that is NOT IN the word
