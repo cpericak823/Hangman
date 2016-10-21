@@ -1,6 +1,6 @@
 //Variables
 var availableLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-var movies = ['the blues brothers', 'ferris bueller\'s day off', 'the break up', 'home alone', 'the dark knight'];
+var movies = ['t h e - b l u e s - b r o t h e r s', 'f e r r i s - b u e l l e r \' s - d a y o f f', 't h e - b r e a k - u p', 'h o m e - a l o n e ', 't h e- d a r k - k n i g h t'];
 var computerWord = '';
 var userGuess = '';
 var matchedGueses = '';
@@ -19,8 +19,9 @@ function pickMovie() {
 
 //Computer shows underscores to represent the number of letters in movie title
     pickMovie()
-    computerWord = chosenMovie.replace(/[a-z]/g, '_')
-    document.getElementById("computerWord").innerHTML = computerWord
+    computerWord = chosenMovie.replace(/[a-z]/g,'_', ' ');
+    
+    document.getElementById("computerWord").innerHTML = 'Title: ' + computerWord
 
 //show the word in the console
 console.log(chosenMovie);
@@ -30,7 +31,7 @@ function listGuesses(){
 	var allowedGuesses;
 }
 	listGuesses()
-	document.getElementById("allowedGuesses").innerHTML = allowedGuesses
+	document.getElementById("allowedGuesses").innerHTML = 'Guesses left: ' + allowedGuesses
 
 
 //If the user guesses a letter that is in the title, replace the underscore that represents the letter with that letter
@@ -43,7 +44,7 @@ if (userGuess === computerWord){
 
 else {
 	// alert ("Wrong");
-	document.getElementById("userGuess").innerHTML = userGuess
+	document.getElementById("userGuess").innerHTML = 'Letters Guessed: ' + userGuess
 
 }
 
