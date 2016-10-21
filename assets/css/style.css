@@ -46,6 +46,6 @@ body {
 	margin: 0 auto;
 }
 
-.computerWord {
-	letter-spacing: 3px;
+#computerWord {
+	letter-spacing: 2px;
 }
